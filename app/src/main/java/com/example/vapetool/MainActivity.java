@@ -109,22 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isValidEntries() {
         int enteredCount = 0;
-        for (EditText text : editTexts) {
-
-            if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
-                enteredCount += 1;
-            }
-        }
-
-        for (EditText text : editTextsNic) {
-
-            if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
-                enteredCount += 1;
-            }
-        }
-
-        for (EditText text : editTextsFlav) {
-
+        for (EditText text : editTexts){
             if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
                 enteredCount += 1;
             }
