@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ohmslaw_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="Ohm's Law"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/voltage_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ohmslaw_layout">
+
+                <TextView
+                    android:id="@+id/voltage_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Voltage (V)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/voltage_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/resistence_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/voltage_layout">
+
+                <TextView
+                    android:id="@+id/resistence_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resistence (Ohms)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/resistence_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/current_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/resistence_layout">
+
+                <TextView
+                    android:id="@+id/current_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Current (A)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wattage_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/current_layout">
+
+                <TextView
+                    android:id="@+id/wattage_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wattage (W)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wattage_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calc_clear_layout"
+                android:layout_below="@+id/wattage_layout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/calculate"
+                    android:gravity="center"
+                    android:hint="Calculate"/>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clear"
+                    android:hint="Clear"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pic_layout"
+                android:layout_below="@+id/calc_clear_layout"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ohmslaw"
+                    android:src="@drawable/ohmslaw"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nicotine_calculator_layout"
+                android:layout_below="@+id/pic_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="Nicotine Calculator"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liquid_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/nicotine_calculator_layout">
+
+                <TextView
+                    android:id="@+id/liquid_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loquid with 0 nicotine(ml)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/liquid_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nicotine_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/liquid_layout">
+
+                <TextView
+                    android:id="@+id/nicotine_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nicotine strength(mg/ml)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nicotine_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nicotine_wanted_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/nicotine_layout">
+
+                <TextView
+                    android:id="@+id/nicotine_wanted_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Final concentration wanted(mg/ml)"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nicotine_wanted_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calc_nic_layout"
+                android:layout_below="@+id/nicotine_wanted_layout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/calculate_nicotine"
+                    android:gravity="center"
+                    android:hint="Calculate"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nicotine_results_layout"
+                android:layout_below="@+id/calc_nic_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:text="Results: "
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nicotine_must_add_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/nicotine_results_layout">
+
+                <TextView
+                    android:id="@+id/nicotine_must_add_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add nic for your concentration(mg/ml)"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nicotine_must_add_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_liquid_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/nicotine_must_add_layout">
+
+                <TextView
+                    android:id="@+id/total_liquid_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Liquid"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/total_liquid_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/flavor_calculator_layout"
+                android:layout_below="@+id/total_liquid_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="Flavor Calculator"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flavor_own_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/flavor_calculator_layout">
+
+                <TextView
+                    android:id="@+id/flavor_own_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flavor own"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flavor_own_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flavor_need_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/flavor_own_layout">
+
+                <TextView
+                    android:id="@+id/flavor_need_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flavor need for 100ml"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flavor_need_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calc_flavor_layout"
+                android:layout_below="@+id/flavor_need_layout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/calculate_flavor"
+                    android:gravity="center"
+                    android:hint="Calculate"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/flavor_results_layout"
+                android:layout_below="@+id/calc_flavor_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:text="Results: "
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/liquid_total_flavor_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/flavor_results_layout">
+
+                <TextView
+                    android:id="@+id/liquid_total_flavor_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total liquid"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/liquid_total_flavor_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_base_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/liquid_total_flavor_layout">
+
+                <TextView
+                    android:id="@+id/total_base_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total base to add: "
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/total_base_value"
+                    android:layout_weight="1"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:hint="0"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
