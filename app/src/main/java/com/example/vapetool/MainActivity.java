@@ -13,7 +13,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private EditText volts, amps, ohms, watts;
     private List<EditText> editTexts, editTextsNic, editTextsFlav;
-    private Dialog dialog;
     private EditText liquid, nicotineStrength, finalStrenghtNicotine, addingNicotine, totalLiquid;
     private EditText flavourOwn, flavourNeed, totalMadeLiq, baseAdd;
 
@@ -23,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initializeEditTexts();
         initializeButtons();
-        //dialog = new Dialog(this);
-
     }
 
     @Override
@@ -34,25 +31,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeEditTexts() {
         editTexts = new ArrayList<>();
-
         volts =  findViewById(R.id.voltage_value);
         amps =  findViewById(R.id.current_value);
         ohms =  findViewById(R.id.resistence_value);
         watts =  findViewById(R.id.wattage_value);
-
         editTexts.add(volts);
         editTexts.add(amps);
         editTexts.add(ohms);
         editTexts.add(watts);
 
         editTextsNic = new ArrayList<>();
-
         liquid = findViewById(R.id.liquid_value);
         nicotineStrength = findViewById(R.id.nicotine_value);
         finalStrenghtNicotine = findViewById(R.id.nicotine_wanted_value);
         addingNicotine = findViewById(R.id.nicotine_must_add_value);
         totalLiquid = findViewById(R.id.total_liquid_value);
-
         editTextsNic.add(liquid);
         editTextsNic.add(nicotineStrength);
         editTextsNic.add(finalStrenghtNicotine);
@@ -60,29 +53,21 @@ public class MainActivity extends AppCompatActivity {
         editTextsNic.add(totalLiquid);
 
         editTextsFlav = new ArrayList<>();
-
         flavourOwn = findViewById(R.id.flavor_own_value);
         flavourNeed = findViewById(R.id.flavor_need_value);
         totalMadeLiq = findViewById(R.id.liquid_total_flavor_value);
         baseAdd = findViewById(R.id.total_base_value);
-
         editTextsFlav.add(flavourOwn);
         editTextsFlav.add(flavourNeed);
         editTextsFlav.add(totalMadeLiq);
         editTextsFlav.add(baseAdd);
-
-
-
-
 
     }
 
     private void initializeButtons() {
         Button calculate = findViewById(R.id.calculate);
         Button reset =  findViewById(R.id.clear);
-
         Button calculateNicotine = findViewById(R.id.calculate_nicotine);
-
         Button calculateFlavor = findViewById(R.id.calculate_flavor);
 
         calculateFlavor.setOnClickListener(new View.OnClickListener() {
@@ -129,11 +114,21 @@ public class MainActivity extends AppCompatActivity {
             if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
                 enteredCount += 1;
             }
-
         }
 
+        for (EditText text : editTextsNic) {
 
+            if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
+                enteredCount += 1;
+            }
+        }
 
+        for (EditText text : editTextsFlav) {
+
+            if (!text.getText().toString().equals("") && !text.getText().toString().equals("0")) {
+                enteredCount += 1;
+            }
+        }
         return true;
     }
 
